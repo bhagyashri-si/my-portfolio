@@ -1,8 +1,8 @@
 :root {
     --bg-color: #ffffff;
-    --second-bg-color: #f5f5f5;
-    --text-color: #1f242d;
-    --main-color: #008069; 
+    --second-bg-color: #abe2fe;
+    --text-color: #02080d;
+    --main-color: #1a80c8; 
 }
 
 * {
@@ -31,7 +31,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 3rem 1rem;
     background: var(--main-color); 
     display: flex;
     justify-content: space-between;
@@ -73,8 +73,8 @@ body {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    min-height: 80vh;            
-    padding: 10rem 9% 2rem;        
+    min-height: 100vh;            
+    padding: 10rem 9% 6rem;        
     background: var(--bg-color);
 }
 
@@ -93,7 +93,7 @@ body {
     height: 30vw;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
+    box-shadow: 0 0 5px var(--main-color);
     cursor: pointer;
     animation: floatImage 4s ease-in-out infinite;
     transition: 0.4s ease;
@@ -107,16 +107,16 @@ body {
     transition: 0.3s ease;
 }
 .home-img img:hover {
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 35px var(--main-color),
-                0 0 45px var(--main-color);
+    box-shadow: 0 0 5px var(--main-color),
+                0 0 15px var(--main-color),
+                0 0 25px var(--main-color);
 }
 @keyframes floatImage {
     0% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-0.5rem);
+        transform: translateY(-0.2rem);
     }
     100% {
         transform: translateY(0);
@@ -178,40 +178,45 @@ body {
 /* About Section Code */
 
 .about {
-    display: flex;             /* 👈 Add this line */
+    display: flex;           
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     background: var(--snd-bg-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12rem 2% 6rem;
 }
 
 .about-img img {
-    width:25vw;
+    width: 30vw;
+    height: 30vw;
     border: 2px solid var(--main-color);
+    object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
+    box-shadow: 0 0 5px var(--main-color);
     cursor: pointer;
     transition: 0.4s ease;
 }
 
 .about-img img:hover {
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 35px var(--main-color),
-                0 0 45px var(--main-color);
+    box-shadow: 0 0 5px var(--main-color),
+                0 0 15px var(--main-color),
+                0 0 25px var(--main-color);
 }
 
 .heading {
-    font-size: 6rem;
+    font-size: 4rem;
     text-align: left;
 }
 
 .about-content {
-    padding: 0 4rem;
+    padding: 0;
 }
 
 .about-content h2 {
     text-align: left;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 .about-content h3 {
@@ -221,4 +226,63 @@ body {
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+}
+
+/* Services section code */
+.services {
+    padding: 10rem 2% 10rem;
+    background: var(--bg-color);
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    padding: 0;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-container .services-box {
+    flex: 1 1 32rem;
+    background: var(--second-bg-color);
+    padding: 4rem 2.5rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.3rem solid var(--bg-color);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services-container .services-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.services-box i {
+    font-size: 6rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.services-box h3 {
+    font-size: 2.4rem;
+}
+
+.services-box p {
+    font-size: 1.5rem;
+    margin: 1rem 0 2.5rem;
+    line-height: 1.5;
 }
